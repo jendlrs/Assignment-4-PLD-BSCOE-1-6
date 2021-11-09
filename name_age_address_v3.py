@@ -3,7 +3,13 @@
 #Hi, my name is _____. I am ____ years old and I live in _____ .
 def getNameAgeAddress():
     nameA= input ("\nWhat is your name? \n> ")
-    ageA= int(input("\nHow old are you? \n> "))
+    while True:
+        try:
+          ageA= int(input("\nHow old are you? \n> "))
+          break
+        except ValueError:
+            print("\nThe age you entered is invalid. Please enter your age in numbers only")
+            continue
     addressA= input ("\nWhere do you live? \n> ")
     return nameA, ageA, addressA
 
@@ -12,7 +18,7 @@ def display(nameB, ageB, addressB):
 
 #steps
 #ask for name, age (in numbers), and address
-name, age, address =getNameAgeAddress()
+name, age, address = getNameAgeAddress()
 
 #display
 display(name, age, address)
