@@ -9,8 +9,10 @@ def getNameAgeAddress():
 
 def display(nameB, ageB, addressB):
     print(f"\nHi, my name is {nameB}. I am {ageB} years old and I live in {addressB} \n")
+
 #steps
-#ask for name, age, and address
+#ask for name, age (in numbers), and address
 name, age, address =getNameAgeAddress()
+
 #display
 display(name, age, address)
