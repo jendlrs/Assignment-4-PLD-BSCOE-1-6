@@ -3,15 +3,21 @@
 #Display the output in the following format.
 #You can buy ___ apples and your change is ___ pesos.
 
+print ("\nWelcome to Jensen's fruit stand!")
+
 def getMoney_andCostPerApple():
-    moneyA= float(input("\nEnter the amount of money you have: \n>"))
-    cost_per_appleA=float(input("\nPrice per apple: \n>"))
+    moneyA= float(input("\nEnter the amount of money you have: \n> "))
+    cost_per_appleA=float(input("\nPrice per apple: \n> "))
     return moneyA, cost_per_appleA
 
-def max_apple_and_cost (moneyA, cost_per_appleA):
-    max_apple = int(moneyA//cost_per_appleA)
+def max_apple_and_change (moneyA, cost_per_appleA):
+    max_appleA = int(moneyA/cost_per_appleA)
     changeA = moneyA % cost_per_appleA
-    print (f"\nYou can buy {max_apple:,} apple/s and your change is {changeA:,.2f}\n")
+    return max_appleA, changeA
+
+def display(max_appleB, changeB):
+    print (f"\nYou can buy {max_appleB:,} apple/s and your change is {changeB:,.2f} pesos\n")
 
 money, cost_per_apple =getMoney_andCostPerApple()
-max_apple_and_cost(money, cost_per_apple)
+max_apple, change = max_apple_and_change(money, cost_per_apple)
+display(max_apple, change)
