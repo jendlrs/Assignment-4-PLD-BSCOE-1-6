@@ -16,7 +16,10 @@ def max_apple_and_change (moneyA, cost_per_appleA):
     return max_appleA, changeA
 
 def display(max_appleB, changeB):
-    print (f"\nYou can buy {max_appleB:,} apple/s and your change is {changeB:,.2f} pesos\n")
+    if max_appleB > 1:
+        print (f"\nYou can buy {max_appleB:,} apples and your change is {changeB:,.2f} pesos\n")
+    elif max_appleB == 1:
+        print (f"\nYou can buy {max_appleB:,} apple and your change is {changeB:,.2f} pesos\n")
 
 money, cost_per_apple =getMoney_andCostPerApple()
 max_apple, change = max_apple_and_change(money, cost_per_apple)
