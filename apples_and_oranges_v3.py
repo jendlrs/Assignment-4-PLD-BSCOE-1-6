@@ -7,7 +7,12 @@ def getApplesAndOranges():
 
 def computeForTotalCost(quantity_AppleB, quantity_OrangeB):
     totalA= 20*quantity_AppleB + 25*quantity_OrangeB
-    print (f"\nThe total amount is {totalA:,.0f} PHP.\n")
+    return totalA
+
+def display(totalB):
+    print (f"\nThe total amount is {totalB:,.0f} PHP.\n")
 
 quantity_apple, quantity_orange = getApplesAndOranges()
-total=computeForTotalCost(quantity_apple, quantity_orange)
+total= computeForTotalCost(quantity_apple, quantity_orange)
+
+display (total)
