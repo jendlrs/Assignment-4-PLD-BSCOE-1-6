@@ -8,4 +8,10 @@ def getMoney_andCostPerApple():
     cost_per_appleA=float(input("\nPrice per apple: \n>"))
     return moneyA, cost_per_appleA
 
-getMoney_andCostPerApple()
+def max_apple_and_cost (moneyA, cost_per_appleA):
+    max_apple = int(moneyA//cost_per_appleA)
+    changeA = moneyA % cost_per_appleA
+    print (f"\nYou can buy {max_apple:,} apple/s and your change is {changeA:,.2f}\n")
+
+money, cost_per_apple =getMoney_andCostPerApple()
+max_apple_and_cost(money, cost_per_apple)
